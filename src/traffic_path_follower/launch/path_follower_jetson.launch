@@ -1,0 +1,12 @@
+<?xml version="1.0" ?>
+<launch>
+	<include ns="camera" file="$(find ros_deep_learning)/launch/video_source.ros1.launch" />
+    <rosparam file = "$(find traffic_path_follower)/config/path.yaml" command = "load"  />
+    <rosparam file = "$(find traffic_path_follower)/config/controller_params.yaml" command = "load"  />
+    <rosparam file = "$(find traffic_path_follower)/config/vision_params.yaml" command = "load"  />
+    <node name="light_detector" pkg="traffic_path_follower" type="vision.py" />
+    <node name="linear_controller" pkg="traffic_path_follower" type="controller.py" />
+    <node name="angular_controller" pkg="traffic_path_follower" type="controller.py" />
+    <node name="path_generator" pkg="traffic_path_follower" type="path_generator.py"/>
+    <node name="path_follower" pkg="traffic_path_follower" type="path_follower.py" output="screen"/>
+</launch>
