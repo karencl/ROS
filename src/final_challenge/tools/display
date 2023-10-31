@@ -1,0 +1,7 @@
+gnome-terminal --tab -e "export ROS_MASTER_URI=http://10.42.0.1:11311 \
+export ROS_IP=10.42.0.60 \
+rqt_image_view /processed_image_line" --tab -e "export ROS_MASTER_URI=http://10.42.0.1:11311 \
+export ROS_IP=10.42.0.60 \
+rqt_image_view /processed_image_crossroad" --tab -e "export ROS_MASTER_URI=http://10.42.0.1:11311 \
+export ROS_IP=10.42.0.60 \
+rqt_image_view /processed_image_yolo"

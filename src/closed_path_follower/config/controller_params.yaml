@@ -1,0 +1,10 @@
+linear_controller_kP :  0.08
+linear_controller_kI :  0.015
+linear_controller_kD :  0.0
+linear_controller_max_speed : 0.75
+
+angular_controller_kP :  2
+angular_controller_kI :  0.0
+angular_controller_kD :  0.0
+angular_controller_max_speed : 5
+controller_Ts : 0.02

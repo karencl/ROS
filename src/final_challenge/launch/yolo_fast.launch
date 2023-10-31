@@ -1,0 +1,5 @@
+<?xml version="1.0" ?>
+<launch>
+    <rosparam file = "$(find final_challenge)/config/thresholds_fast.yaml" command = "load"  />
+    <node name="yolo_node" output="screen" pkg="final_challenge" type="yolo_node.py"/>
+</launch>

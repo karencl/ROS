@@ -1,0 +1,4 @@
+<?xml version="1.0" ?>
+<launch>
+    <node name="filter" pkg="cv_practise" type="filter.py" output="screen"/>
+</launch>

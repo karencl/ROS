@@ -1,0 +1,9 @@
+<?xml version="1.0" ?>
+<launch>
+    <rosparam file = "$(find fuzzy_path_follower)/config/path.yaml" command = "load"  />
+    <rosparam file = "$(find fuzzy_path_follower)/config/controller_params.yaml" command = "load"  />
+    <node name="linear_controller" pkg="fuzzy_path_follower" type="controller.py" output="screen"/>
+    <node name="angular_controller" pkg="fuzzy_path_follower" type="controller.py" output="screen"/>
+    <node name="path_generator" pkg="fuzzy_path_follower" type="path_generator.py" output="screen"/>
+    <node name="path_follower" pkg="fuzzy_path_follower" type="path_follower.py" output="screen"/>
+</launch>

@@ -1,0 +1,21 @@
+path: 
+
+  # Probar estos uno por uno
+  #- [1.6, 0]
+  #- [-0.8, 0]  
+  #- [0, 0.8] 
+  #- [0, -1.2] 
+  #- [0.8, 0.8] 
+  #- [-0.8, -0.8]  
+
+  # Probar estos en conjunto [cuadrado]
+  #- [2, 0]
+  #- [2, 2]  
+  #- [0, 2] 
+  #- [0, 0] 
+
+  # Probar estos en conjunto [zigzag]
+  - [2.5, 0]
+  - [2.5, 2.5]
+  - [0, 2.5]
+  - [0, 0]

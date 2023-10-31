@@ -1,0 +1,21 @@
+distance_range : 
+  - 0
+  - 5
+
+linear_output_range :
+  - 0
+  - 0.75
+
+angular_output_range :
+  - -1
+  - 1
+
+linear_controller_antecedents:
+  - 9
+  - 7
+  - 15
+
+angular_controller_antecedents:
+  - 3
+  - 13
+  - 13

@@ -1,0 +1,7 @@
+<?xml version="1.0" ?>
+<launch>
+    <rosparam file = "$(find final_challenge)/config/thresholds.yaml" command = "load"  />
+
+    <node name="line_detector" pkg="final_challenge" type="line_centroid.py"  args="sim">
+    <node name="crossroad_detector" pkg="final_challenge" type="crossroad.py" args="sim"/>
+</launch>

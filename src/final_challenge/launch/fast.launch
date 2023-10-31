@@ -1,0 +1,26 @@
+<?xml version="1.0" ?>
+<launch>
+    <!-- Camera and hackerboard-->
+    <include ns="puzzlebot" file="$(find puzzlebot_autostart)/launch/puzzlebot_autostart.launch" />
+	<include ns="camera" file="$(find ros_deep_learning)/launch/video_source.ros1.launch" />
+
+    <!-- Parameters-->
+    <rosparam file = "$(find final_challenge)/config/controller_params_fast.yaml" command = "load"  />
+    <rosparam file = "$(find final_challenge)/config/commands_fast.yaml" command = "load"  />
+    <rosparam file = "$(find final_challenge)/config/thresholds_fast.yaml" command = "load"  />
+
+    <!-- Artificial Intelligence -->
+    <node name="sign_detector" output="screen" pkg="final_challenge" type="sign_detector.py" args="jet"/>
+    <node name="traffic_light_detector" output="screen" pkg="final_challenge" type="traffic_light_detector.py" args="jet"/>
+
+    <!-- Vision -->
+    <node name="line_detector" output="screen" pkg="final_challenge" type="line_centroid.py" args="jet"/>
+    <node name="crossroad_detector" pkg="final_challenge" type="crossroad.py" args="jet" />
+
+    <!-- Control -->
+    <node name="line_follower_controller" output="screen" pkg="final_challenge" type="controller.py" args="jet line_centroid line_angular_vel"/>
+    <node name="turn_controller" pkg="final_challenge" type="controller.py" args="jet turn_error turn_angular_vel"/>
+
+    <!-- Main -->
+    <node name="main" pkg="final_challenge" type="main.py" output="screen" args="jet"/>
+</launch>

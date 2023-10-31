@@ -1,0 +1,6 @@
+<?xml version="1.0" ?>
+<launch>
+    <include ns="camera" file="$(find ros_deep_learning)/launch/video_source.ros1.launch" />
+    <rosparam file = "$(find final_challenge)/config/thresholds.yaml" command = "load"  />
+    <node name="yolo_node" output="screen" pkg="final_challenge" type="yolo_node.py"/>
+</launch>

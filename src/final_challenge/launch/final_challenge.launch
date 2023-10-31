@@ -1,0 +1,22 @@
+<?xml version="1.0" ?>
+<launch>
+    <!-- Parameters-->
+    <rosparam file = "$(find final_challenge)/config/controller_params.yaml" command = "load"  />
+    <rosparam file = "$(find final_challenge)/config/thresholds.yaml" command = "load"  />
+
+    <!-- Artificial Intelligence -->
+    <!--<node name="yolo_node" output="screen" pkg="final_challenge" type="yolo_node.py"/>
+    <node name="sign_detector" pkg="final_challenge" type="sign_detector.py" args="sim"/>
+    <node name="traffic_light_detector" pkg="final_challenge" type="traffic_light_detector.py" args="sim"/>-->
+
+    <!-- Vision -->
+    <node name="line_detector" output="screen" pkg="final_challenge" type="line_centroid.py" args="sim"/>
+    <node name="crossroad_detector" pkg="final_challenge" type="crossroad.py" args="sim" />
+
+    <!-- Control -->
+    <node name="line_follower_controller" output="screen" pkg="final_challenge" type="controller.py" args="sim line_centroid line_angular_vel"/>
+    <node name="turn_controller" pkg="final_challenge" type="controller.py" args="sim turn_error turn_angular_vel"/>
+
+    <!-- Main -->
+    <node name="main" pkg="final_challenge" type="main.py" output="screen" args="sim"/>
+</launch>

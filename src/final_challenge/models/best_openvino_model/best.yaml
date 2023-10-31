@@ -1,0 +1,11 @@
+stride: 32
+names:
+  0: forward
+  1: give_way
+  2: left
+  3: right
+  4: road_work
+  5: stop
+  6: green
+  7: red
+  8: yellow
