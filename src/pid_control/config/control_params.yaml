@@ -1,0 +1,4 @@
+controller_kP: 0.06
+controller_kI: 0.05
+controller_kD: 0.0
+controller_Ts: 0.1

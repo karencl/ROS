@@ -1,0 +1,9 @@
+setpoint_amplitude: 5 # Radians/second
+setpoint_max_amplitude: 18 # Radians/second
+setpoint_period: 2 # Seconds
+
+
+# 0 : step
+# 1 : sine
+# 2 : square
+setpoint_mode: 1

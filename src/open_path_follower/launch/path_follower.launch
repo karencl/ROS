@@ -1,0 +1,7 @@
+<?xml version="1.0" ?>
+<launch>
+    <rosparam file = "$(find open_path_follower)/config/path.yaml" command = "load"  />
+    <node name="script_selector" pkg="open_path_follower" type="script_selector.py" output="screen"/>
+    <node name="path_follower" pkg="open_path_follower" type="path_follower.py" output="screen"/>
+    <node name="rqt_graph" pkg="rqt_graph" type="rqt_graph" output="screen" />
+</launch>

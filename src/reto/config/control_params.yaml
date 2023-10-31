@@ -1,0 +1,16 @@
+controller_Ts: 0.1 # Arduino sampling time in seconds
+
+# Step Function
+controller_kP_step: 0.03
+controller_kI_step: 0.05
+controller_kD_step: 0.0
+
+# Sine wave
+controller_kP_sine: 0.08
+controller_kI_sine: 0.08
+controller_kD_sine: 0.0
+
+# Square wave
+controller_kP_square: 0.03
+controller_kI_square: 0.045
+controller_kD_square: 0.0

@@ -1,0 +1,6 @@
+<?xml version="1.0" ?>
+<launch>
+    <rosparam file = "$(find line_follower)/config/vision_params.yaml" command = "load"  />
+
+    <node name="traffic_detector" pkg="line_follower" output="screen" type="traffic_light.py" />
+</launch>

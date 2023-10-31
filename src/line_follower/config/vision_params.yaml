@@ -1,0 +1,9 @@
+redColorLower : [160, 90, 0]
+redColorUpper : [180, 255, 255]
+greenColorLower : [40, 40, 0]
+greenColorUpper : [60, 255, 255]
+yellowColorLower : [0, 60, 0]
+yellowColorUpper : [30, 255, 255]
+secondRedColorLower : [0,90,0]
+secondRedColorUpper : [20,255,255]
+min_radius : 20

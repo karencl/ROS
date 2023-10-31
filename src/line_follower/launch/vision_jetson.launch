@@ -1,0 +1,7 @@
+<?xml version="1.0" ?>
+<launch>
+    <include ns="camera" file="$(find ros_deep_learning)/launch/video_source.ros1.launch" />
+    <rosparam file = "$(find line_follower)/config/vision_params.yaml" command = "load"  />
+    <node name="line_detector" pkg="line_follower" type="line_centroid.py" />
+    <node name="traffic_detector" pkg="line_follower" type="traffic_light.py" />
+</launch>
